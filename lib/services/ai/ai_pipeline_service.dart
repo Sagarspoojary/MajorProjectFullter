@@ -27,8 +27,7 @@ class AiPipelineService {
     if (_isConnected) return;
 
     try {
-      // Use host computer's actual local IP address for the physical device (V2050)
-      const String serverUrl = 'ws://192.168.31.193:8000/ws';
+      const String serverUrl = 'wss://majorprojectfullter.onrender.com/ws';
       debugPrint('[WebSocket Client] Connecting to SHEGUARD AI Backend at $serverUrl...');
       
       _webSocket = await WebSocket.connect(serverUrl)
